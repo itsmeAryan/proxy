@@ -6,7 +6,7 @@ import  rateLimit from "express-rate-limit";
 import apicache from "apicache";
 import cors from "cors"
 const limiter=rateLimit({
-    windowMs:10*10*1000,
+    windowMs:10*60*1000,
     max:20
 })
 const cache=apicache.middleware;
