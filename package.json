@@ -1,0 +1,31 @@
+{
+  "name": "foody",
+  "version": "1.0.0",
+  "description": "this is for foody people",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run start\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "itsmeAryan",
+  "license": "ISC",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "axios": "^0.26.0",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "http-proxy-middleware": "^2.0.3",
+    "mongoose": "^6.2.3",
+    "needle": "^3.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
