@@ -17,6 +17,9 @@ app.use("/",createProxyMiddleware({
     target:process.env.web_http,
     changeOrigin:true
 }))
+app.get("/",(req,res)=>{
+res.send("welcome to the page use route to get data /products");
+})
 app.listen(PORT,()=>{
     console.log(`server started at http://localhost:${PORT}`)
 })
