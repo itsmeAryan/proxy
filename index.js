@@ -12,7 +12,7 @@ const limiter=rateLimit({
 const cache=apicache.middleware;
 app.use(limiter)
 app.use(cors())
-app.use("/",cache('2 minutes'),createProxyMiddleware({
+app.use("/",cache('5 minutes'),createProxyMiddleware({
     target:process.env.web_http,
     changeOrigin:true
 }))
