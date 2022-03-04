@@ -13,7 +13,7 @@ const cache=apicache.middleware;
 app.use(limiter)
 app.use(cors())
 app.use(cache('5 minutes'))
-app.use("/",createProxyMiddleware({
+app.use("/data",createProxyMiddleware({
     target:process.env.web_http,
     changeOrigin:true
 }))
